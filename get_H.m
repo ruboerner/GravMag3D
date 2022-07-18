@@ -10,7 +10,7 @@ function [Hx, Hy, Hz, gx, gy, gz] = get_H(Face, cor, Un, M, density)
 % faces: (nf x 4) array of indices into the array of triangles vtx
 % vtx: (nc x 3) array of triangular vertex coordinates
 % un: (nf x 3) array of unit vectors normal to the triangular faces
-% m: induced magnetization of the body enclosed by triangulation, given in A/m
+% m: (3 x 1) array of induced magnetization of the body enclosed by triangulation, given in A/m
 % density: mass density of the body, given in kg/m^3
 %
 % Output:
