@@ -2,7 +2,7 @@ function [Hx, Hy, Hz, gx, gy, gz] = get_H(Face, cor, Un, M, density)
 % get_H computes the magnetic and gravity anomaly at the origin caused by a solid body
 % defined by a Delaunay triangulation
 %
-% [Hx, Hy, Hz, gx, gy, gz] = get_H(face, vtx, un, m, density)
+% [Bx, By, Bz, gx, gy, gz] = get_H(face, vtx, un, m, density)
 %
 % Input:
 % =====
@@ -16,7 +16,7 @@ function [Hx, Hy, Hz, gx, gy, gz] = get_H(Face, cor, Un, M, density)
 % Output:
 % ======
 %
-% Hx, Hy, Hz: Cartesian components of the magnetic anomaly H at the origin of
+% Bx, By, Bz: Cartesian components of the magnetic anomaly B at the origin of
 % a right-handed coordinate system, given in nanoTesla (nT)
 % gx, gy, gz: Cartesian components of the gravitational attraction g at the
 % origin of a right-handed coordinate system, given in SI units of m/s^2
