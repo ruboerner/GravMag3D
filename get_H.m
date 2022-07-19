@@ -7,7 +7,7 @@ function [Hx, Hy, Hz, gx, gy, gz] = get_H(Face, cor, Un, M, density)
 % Input:
 % =====
 %
-% faces: (nf x 4) array of indices into the array of triangles vtx
+% faces: (nf x 3) array of indices into the array of triangles vtx
 % vtx: (nc x 3) array of triangular vertex coordinates
 % un: (nf x 3) array of unit vectors normal to the triangular faces
 % m: (3 x 1) array of induced magnetization of the body enclosed by triangulation, given in A/m
@@ -29,7 +29,7 @@ Nf = size(Face, 1);
 cor = cor';
 M = 1e-7 * M;
 for f = 1:Nf
-    idx = Face(f, 2:4);
+    idx = Face(f, :);
     crs = cor(:, idx);
     A = crs(:, 1);
     B = crs(:, 2);
