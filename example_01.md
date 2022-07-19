@@ -75,7 +75,7 @@ for i = 1:nf
 end
 ```
 
-We now want to compute the gravitational attraction and the magnetic total field anomaly of the sphere along a profile $-10\le x\le 10$.
+We now want to compute the gravitational attraction and the magnetic total field anomaly of the sphere along a profile $-50\le x\le 50$.
 
 ```matlab:Code
 nx = 101;
