@@ -41,13 +41,13 @@ axis equal
 
 ![figure_0.png](example_01_images/figure_0.png)
 
-From a *Delaunay* triangulation we obtain the *convex hull* formed by the vertices. The volume of the convex hull is returned in the array `v`.
+From a *Delaunay* triangulation we obtain the *convex hull* formed by the vertices.
 
 ```matlab:Code
 [ch, v] = convexHull(delaunayTriangulation(vtx));
 ```
 
-The array `ch` contains the vertices of the convex hull of the triangulation.
+The array `ch` contains the vertices of the convex hull of the triangulation. The volume of the convex hull is returned in the array `v`.
 
 ```matlab:Code
 trisurf(ch, vtx(:,1), vtx(:,2), vtx(:,3), ...
@@ -75,7 +75,7 @@ for i = 1:nf
 end
 ```
 
-We now want to compute the gravitational attraction and the magnetic total field anomlay of the sphere along a profile $-10\le x\le 10$.
+We now want to compute the gravitational attraction and the magnetic total field anomaly of the sphere along a profile $-10\le x\le 10$.
 
 ```matlab:Code
 nx = 101;
@@ -109,9 +109,9 @@ In the following we compute the magnetic anomaly $\Delta B$ and the vertical com
 
 We also compare to reference solutions.
 
-The anomaly of a magnetized sphere is equivalent to a magnetic dipole with dipole moment $m=\int M\,dV$.
+The anomaly of a magnetized sphere is equivalent to a magnetic dipole with dipole moment $m=\int MdV$.
 
-Further, the gravitational attraction of a sphere is equal to that of a point mass with mass $m=\int \rho \,dV$.
+Further, the gravitational attraction of a sphere is equal to that of a point mass with mass $m=\int \rho dV$.
 
 ```matlab:Code
 Bx = zeros(nx, 1);
