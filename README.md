@@ -6,5 +6,3 @@ This repository provides MATLAB code for modelling the 3D gravity and magnetic f
 For a tutorial see [this example](https://github.com/ruboerner/GravMag3D/blob/main/example_01.md).
 
 The method is based on published work by [Guptasarma & Singh (1999)](https://doi.org/10.1190/1.1444531) and [Singh and Guptasarma (2001)](https://doi.org/10.1190/1.1444942).
-
-$\rho$
