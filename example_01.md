@@ -22,7 +22,7 @@ To this end, we create n points by randomly choosing angles $\varphi$  and $\the
 
 ```matlab:Code
 rng(0,'twister');
-n = 200;
+n = 500;
 phi = 2 * pi * rand(n, 1);
 theta = asin(2 * rand(n, 1) - 1);
 radius = 1.0;
@@ -139,6 +139,16 @@ ylabel('\DeltaB_z in nT')
 
 ![figure_2.png](example_01_images/figure_2.png)
 
+The relative L2 norm of the difference is 
+
+```matlab:Code
+norm(Bz' - B(3, :)) / norm(B(3, :))
+```
+
+```text:Output
+ans = 4.4476e-04
+```
+
 ```matlab:Code
 plot(x, gz, '-x', x, g)
 legend('convex hull', 'dipole')
@@ -147,3 +157,13 @@ ylabel('g_z in m/s^2')
 ```
 
 ![figure_3.png](example_01_images/figure_3.png)
+
+The relative L2 norm of the difference is 
+
+```matlab:Code
+norm(gz - g) / norm(g)
+```
+
+```text:Output
+ans = 2.7907e-04
+```
