@@ -1,6 +1,7 @@
 function PQR = get_PQR(crs)
-% get_PQR computes the contributons of each edge of a triangle formed by vertices
+% get_PQR computes the contribution of each of the edges of a triangle formed by vertices
 % P, Q, and R
+%
 %
 % PQR = get_PQR(VTX)
 % 
@@ -11,8 +12,8 @@ function PQR = get_PQR(crs)
 %
 % Output:
 % 
-% The contribution of all three edges to the surface integral formed by the
-% area of the triangle PQR.
+% The contribution to the surface integral PQR formed by all three edges of the
+% triangle PQR.
 %
 arguments
     crs (3,3) {mustBeNumeric}

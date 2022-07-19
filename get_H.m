@@ -1,6 +1,12 @@
 function [Hx, Hy, Hz, gx, gy, gz] = get_H(Face, cor, Un, M, density)
-% get_H computes the magnetic and gravity anomaly at the origin caused by a solid body
-% defined by a Delaunay triangulation
+% get_H computes the magnetic and gravity anomaly 
+% 
+% get_H computes the magnetic and gravity anomaly at the origin of a 
+% right-handed coordinate system. The anomalies are caused by a solid body
+% of homogeneous magnetization and/or density.
+% The shape of the body is approximated by a sufficiently large number of
+% vertices. The convex (or concave) hull is provided by a Delaunay
+% triangulation.
 %
 % [Bx, By, Bz, gx, gy, gz] = get_H(face, vtx, un, m, density)
 %
