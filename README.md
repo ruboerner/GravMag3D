@@ -1,4 +1,4 @@
-# GravMag3D
+# `GravMag3D`
 3D gravity and magnetics modelling
 
 This repository provides MATLAB code for modelling the 3D gravity and magnetic field caused by solid bodies with homogeneous density or homogeneous magnetization, where the shape of the bodies is provided by a surface triangulation.
