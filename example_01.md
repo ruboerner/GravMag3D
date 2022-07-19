@@ -36,7 +36,7 @@ vtx(:, 3) = vtx(:, 3) + depth;
 scatter3(vtx(:, 1), vtx(:, 2), vtx(:, 3), 8, 'filled', ...
     'MarkerFaceColor', 'red');
 set(gca, 'ZDir', 'reverse');
-axis equal
+axis equal off
 ```
 
 ![figure_0.png](example_01_images/figure_0.png)
@@ -57,7 +57,7 @@ scatter3(vtx(:, 1), vtx(:, 2), vtx(:, 3), 8, 'filled', ...
     'MarkerFaceColor', 'red');
 set(gca, 'ZDir', 'reverse');
 hold off
-axis equal
+axis equal off
 ```
 
 ![figure_1.png](example_01_images/figure_1.png)
@@ -75,7 +75,7 @@ for i = 1:nf
 end
 ```
 
-We now want to compute the gravitational attraction and the magnetic total field anomaly of the sphere along a profile $-50\le x\le 50$.
+We now want to compute the gravitational attraction and the magnetic total field anomaly of the sphere along a profile $-10\le x\le 10$.
 
 ```matlab:Code
 nx = 101;
