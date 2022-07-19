@@ -22,6 +22,14 @@ function [Hx, Hy, Hz, gx, gy, gz] = get_H(Face, cor, Un, M, density)
 % origin of a right-handed coordinate system, given in SI units of m/s^2
 %
 %
+arguments
+    Face (:, 3)
+    cor (:, 3)
+    Un (:, 3)
+    M (3,1) {mustBeNumeric}
+    density double {mustBeNumeric}
+end
+
 [Hx, Hy, Hz] = deal(0.0, 0.0, 0.0);
 [gx, gy, gz] = deal(0.0, 0.0, 0.0);
 rhof = density * 6.6732e-11;

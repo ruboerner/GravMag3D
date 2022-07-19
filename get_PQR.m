@@ -14,6 +14,10 @@ function PQR = get_PQR(crs)
 % The contribution of all three edges to the surface integral formed by the
 % area of the triangle PQR.
 %
+arguments
+    crs (3,3) {mustBeNumeric}
+end
+
 PQR = [0; 0; 0];
 edge_index = [1; 2; 3; 1];
 for t = 1:3
