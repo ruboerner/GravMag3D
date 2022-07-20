@@ -86,7 +86,7 @@ nx = 101;
 x = linspace(-50, 50, nx);
 ```
 
-For the calculation of the magnetic anomaly we need the ambient field. It is defined by the vector field $T$ which represents the magnetic flux density of the Earth's magnetic field. The ambient field is considered homogeneous in the region of the measurements. Typically, it is given in units of nanoTesla (nT). A typical value of $T$ in Middle Europe is
+For the calculation of the magnetic anomaly we need the ambient field. It is defined by the vector field $T$ which represents the magnetic flux density of the Earth's magnetic field. The ambient field is considered homogeneous in the region of the measurements. Typically, it is given in units of nanoTesla (nT). A typical value of $T$ in Middle Europe would be
 
 $T=(15000,0,45000)^{\top }$ nT.
 
