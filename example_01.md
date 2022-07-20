@@ -39,8 +39,8 @@ set(gca, 'ZDir', 'reverse');
 axis equal off
 ```
 
-![example_01_images/figure_0.png
-](example_01_images/example_01_images/figure_0.png
+![figure_0.png
+](example_01_images/figure_0.png
 )
 
 From a *Delaunay* triangulation we obtain the *convex hull* formed by the vertices.
@@ -62,8 +62,8 @@ hold off
 axis equal off
 ```
 
-![example_01_images/figure_1.png
-](example_01_images/example_01_images/figure_1.png
+![figure_1.png
+](example_01_images/figure_1.png
 )
 
 We also need the direction of the outer normals of the triangles. The normal direction can be calculated using a vector cross product.
@@ -141,8 +141,8 @@ xlabel('x')
 ylabel('\DeltaB_z in nT')
 ```
 
-![example_01_images/figure_2.png
-](example_01_images/example_01_images/figure_2.png
+![figure_2.png
+](example_01_images/figure_2.png
 )
 
 The relative L2 norm of the difference is 
@@ -162,8 +162,8 @@ xlabel('x in m')
 ylabel('g_z in m/s^2')
 ```
 
-![example_01_images/figure_3.png
-](example_01_images/example_01_images/figure_3.png
+![figure_3.png
+](example_01_images/figure_3.png
 )
 
 The relative L2 norm of the difference is 
