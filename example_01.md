@@ -22,7 +22,7 @@ To this end, we create n points by randomly choosing angles $\varphi$  and $\the
 
 ```matlab:Code
 rng(0,'twister');
-n = 500;
+n = 1000;
 phi = 2 * pi * rand(n, 1);
 theta = asin(2 * rand(n, 1) - 1);
 radius = 1.0;
@@ -53,7 +53,7 @@ The array `ch` contains the vertices of the convex hull of the triangulation. Th
 
 ```matlab:Code
 trisurf(ch, vtx(:,1), vtx(:,2), vtx(:,3), ...
-    'FaceColor', 'blue', 'FaceAlpha', 0.2);
+    'FaceColor', 'blue', 'FaceAlpha', 0.05);
 hold on
 scatter3(vtx(:, 1), vtx(:, 2), vtx(:, 3), 8, 'filled', ...
     'MarkerFaceColor', 'red');
@@ -82,7 +82,7 @@ end
 We now want to compute the gravitational attraction and the magnetic total field anomaly of the sphere along a profile $-50\le x\le 50$.
 
 ```matlab:Code
-nx = 101;
+nx = 201;
 x = linspace(-50, 50, nx);
 ```
 
@@ -152,7 +152,7 @@ norm(Bz' - B(3, :)) / norm(B(3, :))
 ```
 
 ```text:Output
-ans = 4.4476e-04
+ans = 8.6457e-05
 ```
 
 ```matlab:Code
@@ -173,5 +173,21 @@ norm(gz - g) / norm(g)
 ```
 
 ```text:Output
-ans = 2.7907e-04
+ans = 5.1115e-05
 ```
+
+### Error analysis
+
+The ratio of the volume of the sphere and the polyhedron is not one. We obtain
+
+```matlab:Code
+vol_sphere = 4 * pi / 3 * radius^3;
+vol_poly = v;
+vol_poly / vol_sphere * 100
+```
+
+```text:Output
+ans = 98.7944
+```
+
+The polyhedron built from 1000 randomly placed vertices across a spherical surface has a slightly reduced volume which is about 98.8 percent of the volume of the sphere itself.
