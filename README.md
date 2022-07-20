@@ -1,3 +1,5 @@
+[![View GravMag3D on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://de.mathworks.com/matlabcentral/fileexchange/115255-gravmag3d)
+
 # `GravMag3D`
 3D gravity and magnetics modelling
 
