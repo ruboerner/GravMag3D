@@ -36,7 +36,8 @@ vtx(:, 3) = vtx(:, 3) + depth;
 scatter3(vtx(:, 1), vtx(:, 2), vtx(:, 3), 8, 'filled', ...
     'MarkerFaceColor', 'red');
 set(gca, 'ZDir', 'reverse');
-axis equal off
+axis equal
+box('on')
 ```
 
 ![figure_0.png
@@ -53,13 +54,14 @@ The array `ch` contains the vertices of the convex hull of the triangulation. Th
 
 ```matlab:Code
 trisurf(ch, vtx(:,1), vtx(:,2), vtx(:,3), ...
-    'FaceColor', 'blue', 'FaceAlpha', 0.05);
+    'FaceColor', '#1111AA', 'FaceAlpha', 0.1);
 hold on
 scatter3(vtx(:, 1), vtx(:, 2), vtx(:, 3), 8, 'filled', ...
     'MarkerFaceColor', 'red');
 set(gca, 'ZDir', 'reverse');
 hold off
-axis equal off
+axis equal
+box('on')
 ```
 
 ![figure_1.png
@@ -145,16 +147,6 @@ ylabel('\DeltaB_z in nT')
 ](example_01_images/figure_2.png
 )
 
-The relative L2 norm of the difference is 
-
-```matlab:Code
-norm(Bz' - B(3, :)) / norm(B(3, :))
-```
-
-```text:Output
-ans = 8.6457e-05
-```
-
 ```matlab:Code
 plot(x, gz, '-x', x, g)
 legend('convex hull', 'dipole')
@@ -166,7 +158,19 @@ ylabel('g_z in m/s^2')
 ](example_01_images/figure_3.png
 )
 
-The relative L2 norm of the difference is 
+### Error analysis
+
+The relative L2 norm of the difference in the magnetic anomaly is
+
+```matlab:Code
+norm(Bz' - B(3, :)) / norm(B(3, :))
+```
+
+```text:Output
+ans = 8.6457e-05
+```
+
+The relative L2 norm of the difference in the gravity anomaly is
 
 ```matlab:Code
 norm(gz - g) / norm(g)
@@ -175,8 +179,6 @@ norm(gz - g) / norm(g)
 ```text:Output
 ans = 5.1115e-05
 ```
-
-### Error analysis
 
 The ratio of the volume of the sphere and the polyhedron is not one. We obtain
 
